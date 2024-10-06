@@ -11,6 +11,9 @@
 		BB8B8D982CB348B6009B06B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8D972CB348B6009B06B6 /* ContentView.swift */; };
 		BB8B8D9A2CB348B9009B06B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8B8D992CB348B9009B06B6 /* Assets.xcassets */; };
 		BB8B8D9D2CB348B9009B06B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8B8D9C2CB348B9009B06B6 /* Preview Assets.xcassets */; };
+		BB8B8DA42CB34A70009B06B6 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA32CB34A70009B06B6 /* ItemModel.swift */; };
+		BB8B8DA62CB34AB4009B06B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */; };
+		BB8B8DA82CB34B0A009B06B6 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA72CB34B0A009B06B6 /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		BB8B8D972CB348B6009B06B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB8B8D992CB348B9009B06B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8B8D9C2CB348B9009B06B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB8B8DA32CB34A70009B06B6 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BB8B8DA72CB34B0A009B06B6 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 		BB8B8D892CB348B6009B06B6 = {
 			isa = PBXGroup;
 			children = (
+				BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */,
 				BB8B8D942CB348B6009B06B6 /* FindMyThings */,
 				BB8B8D932CB348B6009B06B6 /* Products */,
 			);
@@ -55,6 +62,8 @@
 				BB8B8D972CB348B6009B06B6 /* ContentView.swift */,
 				BB8B8D992CB348B9009B06B6 /* Assets.xcassets */,
 				BB8B8D9B2CB348B9009B06B6 /* Preview Content */,
+				BB8B8DA32CB34A70009B06B6 /* ItemModel.swift */,
+				BB8B8DA72CB34B0A009B06B6 /* AddItemView.swift */,
 			);
 			path = FindMyThings;
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8B8DA42CB34A70009B06B6 /* ItemModel.swift in Sources */,
 				BB8B8D982CB348B6009B06B6 /* ContentView.swift in Sources */,
+				BB8B8DA62CB34AB4009B06B6 /* ViewModel.swift in Sources */,
 				BB8B8D962CB348B6009B06B6 /* FindMyThingsApp.swift in Sources */,
+				BB8B8DA82CB34B0A009B06B6 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
