@@ -18,7 +18,7 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text(item.name)
                             .font(.headline)
-                        Text("Location: \(item.location)")
+                        Text("Location: \(item.locations.joined(separator: " > "))")
                             .font(.subheadline)
                     }
                 }
@@ -40,6 +40,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 #Preview {
     ContentView()

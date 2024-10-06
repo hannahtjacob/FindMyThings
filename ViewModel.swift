@@ -20,8 +20,8 @@ class ItemViewModel: ObservableObject {
         loadItems()
     }
     
-    func addItem(name: String, location: String) {
-        let newItem = Item(id: UUID(), name: name, location: location)
+    func addItem(name: String, locations: [String]) {
+        let newItem = Item(id: UUID(), name: name, locations: locations)
         items.append(newItem)
     }
     
