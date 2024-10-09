@@ -9,37 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = ItemViewModel()
-    @State private var showingAddItemView = false
-    
+
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.items) { item in
-                    VStack(alignment: .leading) {
-                        Text(item.name)
-                            .font(.headline)
-                        Text("Location: \(item.locations.joined(separator: " > "))")
-                            .font(.subheadline)
+                    NavigationLink(destination: EditItemView(viewModel: viewModel, item: item)) {
+                        VStack(alignment: .leading) {
+                            Text(item.name)
+                                .font(.headline)
+                            Text(item.locations.joined(separator: " > "))
+                                .font(.subheadline)
+                        }
                     }
                 }
                 .onDelete(perform: viewModel.deleteItem)
             }
-            .navigationTitle("Items to Find")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showingAddItemView = true
-                    }) {
-                        Image(systemName: "plus")
-                    }
-                }
-            }
-            .sheet(isPresented: $showingAddItemView) {
-                AddItemView(viewModel: viewModel)
-            }
+            .navigationTitle("Items")
+            .navigationBarItems(trailing: NavigationLink(destination: AddItemView(viewModel: viewModel)) {
+                Text("Add")
+            })
         }
     }
 }
+
 
 
 #Preview {

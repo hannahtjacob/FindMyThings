@@ -27,8 +27,17 @@ class ItemViewModel: ObservableObject {
         fetchItems() // Refresh the data
     }
     
+    func updateItem(item: Item) {
+        // First, delete the old item from the database
+        DatabaseManager.shared.deleteItem(withID: item.id)
+        // Then, reinsert the updated item with new values
+        DatabaseManager.shared.insertItem(itemName: item.name, locations: item.locations)
+        fetchItems() // Refresh the data
+    }
+    
     private func fetchItems() {
         items = DatabaseManager.shared.fetchItems().map { $0.item }
     }
 }
+
 
