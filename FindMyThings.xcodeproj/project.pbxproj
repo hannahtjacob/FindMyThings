@@ -15,6 +15,7 @@
 		BB8B8DA62CB34AB4009B06B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */; };
 		BB8B8DA82CB34B0A009B06B6 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA72CB34B0A009B06B6 /* AddItemView.swift */; };
 		BB8B8DAA2CB60911009B06B6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA92CB60911009B06B6 /* DatabaseManager.swift */; };
+		BB8B8DAD2CB60D74009B06B6 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = BB8B8DAC2CB60D74009B06B6 /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8B8DAD2CB60D74009B06B6 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +97,9 @@
 			dependencies = (
 			);
 			name = FindMyThings;
+			packageProductDependencies = (
+				BB8B8DAC2CB60D74009B06B6 /* SQLite */,
+			);
 			productName = FindMyThings;
 			productReference = BB8B8D922CB348B6009B06B6 /* FindMyThings.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +128,9 @@
 				Base,
 			);
 			mainGroup = BB8B8D892CB348B6009B06B6;
+			packageReferences = (
+				BB8B8DAB2CB60D74009B06B6 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = BB8B8D932CB348B6009B06B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB8B8DAB2CB60D74009B06B6 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB8B8DAC2CB60D74009B06B6 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB8B8DAB2CB60D74009B06B6 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB8B8D8A2CB348B6009B06B6 /* Project object */;
 }

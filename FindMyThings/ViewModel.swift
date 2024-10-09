@@ -15,8 +15,8 @@ class ItemViewModel: ObservableObject {
     }
     
     func addItem(name: String, locations: [String]) {
-        DatabaseManager.shared.insertItem(name: name, locations: locations)
-        fetchItems()
+        DatabaseManager.shared.insertItem(itemName: name, locations: locations)
+        fetchItems() // Refresh the data
     }
     
     func deleteItem(at offsets: IndexSet) {
@@ -24,10 +24,11 @@ class ItemViewModel: ObservableObject {
             let item = items[index]
             DatabaseManager.shared.deleteItem(withID: item.id)
         }
-        fetchItems()
+        fetchItems() // Refresh the data
     }
     
     private func fetchItems() {
         items = DatabaseManager.shared.fetchItems().map { $0.item }
     }
 }
+
