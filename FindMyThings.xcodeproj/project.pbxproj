@@ -14,6 +14,7 @@
 		BB8B8DA42CB34A70009B06B6 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA32CB34A70009B06B6 /* ItemModel.swift */; };
 		BB8B8DA62CB34AB4009B06B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */; };
 		BB8B8DA82CB34B0A009B06B6 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA72CB34B0A009B06B6 /* AddItemView.swift */; };
+		BB8B8DAA2CB60911009B06B6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B8DA92CB60911009B06B6 /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BB8B8DA32CB34A70009B06B6 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BB8B8DA72CB34B0A009B06B6 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		BB8B8DA92CB60911009B06B6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,6 @@
 		BB8B8D892CB348B6009B06B6 = {
 			isa = PBXGroup;
 			children = (
-				BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */,
 				BB8B8D942CB348B6009B06B6 /* FindMyThings */,
 				BB8B8D932CB348B6009B06B6 /* Products */,
 			);
@@ -58,12 +59,14 @@
 		BB8B8D942CB348B6009B06B6 /* FindMyThings */ = {
 			isa = PBXGroup;
 			children = (
+				BB8B8DA52CB34AB4009B06B6 /* ViewModel.swift */,
 				BB8B8D952CB348B6009B06B6 /* FindMyThingsApp.swift */,
 				BB8B8D972CB348B6009B06B6 /* ContentView.swift */,
 				BB8B8D992CB348B9009B06B6 /* Assets.xcassets */,
 				BB8B8D9B2CB348B9009B06B6 /* Preview Content */,
 				BB8B8DA32CB34A70009B06B6 /* ItemModel.swift */,
 				BB8B8DA72CB34B0A009B06B6 /* AddItemView.swift */,
+				BB8B8DA92CB60911009B06B6 /* DatabaseManager.swift */,
 			);
 			path = FindMyThings;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				BB8B8DA42CB34A70009B06B6 /* ItemModel.swift in Sources */,
 				BB8B8D982CB348B6009B06B6 /* ContentView.swift in Sources */,
+				BB8B8DAA2CB60911009B06B6 /* DatabaseManager.swift in Sources */,
 				BB8B8DA62CB34AB4009B06B6 /* ViewModel.swift in Sources */,
 				BB8B8D962CB348B6009B06B6 /* FindMyThingsApp.swift in Sources */,
 				BB8B8DA82CB34B0A009B06B6 /* AddItemView.swift in Sources */,
