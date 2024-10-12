@@ -7,7 +7,6 @@
 
 import SQLite
 import Foundation
-
 class DatabaseManager {
     static let shared = DatabaseManager()
     
@@ -20,7 +19,6 @@ class DatabaseManager {
     // Define the columns for the items table
     private let id = Expression<UUID>("id")
     private let name = Expression<String>("name") // This is the column expression
-
     // Define the columns for the locations table
     private let locationID = Expression<Int64>("id")
     private let itemID = Expression<UUID>("item_id")
@@ -118,7 +116,6 @@ class DatabaseManager {
         
         return result
     }
-
     
     // Delete an item and its associated locations
     func deleteItem(withID itemUUID: UUID) {

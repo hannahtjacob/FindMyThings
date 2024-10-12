@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct FindMyThingsApp: App {
     var body: some Scene {
@@ -15,3 +14,4 @@ struct FindMyThingsApp: App {
         }
     }
 }
+

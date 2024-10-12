@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct EditItemView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: ItemViewModel

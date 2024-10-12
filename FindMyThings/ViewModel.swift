@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 class ItemViewModel: ObservableObject {
     @Published var items: [Item] = []
     
@@ -39,5 +38,3 @@ class ItemViewModel: ObservableObject {
         items = DatabaseManager.shared.fetchItems().map { $0.item }
     }
 }
-
-

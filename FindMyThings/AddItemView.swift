@@ -22,7 +22,14 @@ struct AddItemView: View {
                     // Dynamic Location Fields
                     ForEach(locations.indices, id: \.self) { index in
                         HStack {
-                            TextField("Location Level \(index + 1)", text: $locations[index])
+                            TextField("Location Level \(index + 1)", text: Binding(
+                                get: { locations[safe: index] ?? "" },
+                                set: { newValue in
+                                    if index < locations.count {
+                                        locations[index] = newValue
+                                    }
+                                }
+                            ))
                             if locations.count > 1 {
                                 Button(action: {
                                     removeLocation(at: index)
@@ -50,6 +57,10 @@ struct AddItemView: View {
                 }
             }
             .navigationTitle("Add New Item")
+            .onChange(of: locations) { oldValue, newValue in
+                // Trigger UI refresh when locations change, if necessary
+                print("Locations changed from \(oldValue) to \(newValue)")
+            }
         }
     }
     
@@ -60,6 +71,14 @@ struct AddItemView: View {
     
     // Function to remove a location field
     private func removeLocation(at index: Int) {
-        locations.remove(at: index)
+        if locations.count > 1 {
+            locations.remove(at: index)
+        }
+    }
+}
+
+extension Collection {
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }

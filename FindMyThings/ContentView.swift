@@ -6,10 +6,8 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     @ObservedObject var viewModel = ItemViewModel()
-
     var body: some View {
         NavigationView {
             List {
@@ -32,9 +30,6 @@ struct ContentView: View {
         }
     }
 }
-
-
-
 #Preview {
     ContentView()
 }
